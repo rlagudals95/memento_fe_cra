@@ -1,6 +1,6 @@
 {
-	"name": "vite-react-boilerplate",
-	"author": "Ricardo Valdovinos <ricardovaldovinos1996@gmail.com>",
+	"name": "memento-fe-cra",
+	"author": "memento-fe-cra",
 	"description": "A production ready, batteries included starter template for Vite + React projects",
 	"keywords": [
 		"vite",
@@ -17,7 +17,7 @@
 	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
-		"setup": "git init && husky install && npx playwright install",
+		"setup": "husky install && npx playwright install",
 		"format": "prettier src/**/*.{ts,tsx} --write",
 		"lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"lint:fix": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --fix",
