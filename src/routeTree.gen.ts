@@ -11,18 +11,18 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
 import { Route as TutorialImport } from './routes/tutorial'
+import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const IndexRoute = IndexImport.update({
-  path: '/',
+const TutorialRoute = TutorialImport.update({
+  path: '/tutorial',
   getParentRoute: () => rootRoute,
 } as any)
 
-const TutorialRoute = TutorialImport.update({
-  path: '/tutorial',
+const IndexRoute = IndexImport.update({
+  path: '/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -34,8 +34,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-  }
-  interface FileRoutesByPath {
     '/tutorial': {
       preLoaderRoute: typeof TutorialImport
       parentRoute: typeof rootRoute
